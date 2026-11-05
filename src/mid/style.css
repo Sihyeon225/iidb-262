@@ -1,0 +1,636 @@
+/* Helvetica Neue Bold */
+/* @font-face {
+  font-family: "Helvetica Neue";
+  src: url("./fonts/HelveticaNeue Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #fff;
+}
+
+/* Desktop (1440 x 1024)*/
+#poster {
+  width: 100%;
+  max-width: 1440px;
+
+  position: relative;
+  margin-inline: auto;
+
+  background-image: url("./assets/art.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.grid {
+  display: grid;
+
+  width: calc(100% * 1370 / 1440);
+  margin-inline: auto;
+  padding-block: min(2.638889vw, 38px);
+
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  grid-template-rows: repeat(22, minmax(0, 1fr));
+  gap: 10px;
+}
+
+#artsize {
+  display: none;
+}
+
+/* 로고+제목 */
+#logo {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 6;
+  justify-self: start;
+  align-self: start;
+  width: 100%;
+  height: auto;
+  max-width: 174px;
+  object-fit: contain;
+}
+
+#title {
+  grid-column: 1 / span 8;
+  grid-row: span 13 / -1;
+  justify-self: start;
+  align-self: end;
+  width: 100%;
+  height: auto;
+  max-width: 681px;
+  object-fit: contain;
+}
+
+/* 날짜+장소+서울로고 */
+.date {
+  min-width: 0;
+  font-family: "HelveticaNeue", sans-serif;
+  text-align: right;
+  font-size: clamp(72px, calc(48px + 3.333333vw), 96px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 91%; /* 87.36px */
+  letter-spacing: -0.01em;
+
+  grid-column: 5 / 11;
+  grid-row: 1 / span 4;
+}
+
+.wrap1 {
+  display: contents;
+}
+
+.place {
+  font-family: "Noto Sans KR";
+  font-size: clamp(28px, calc(18px + 1.25vw), 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 114%; /* 41.04px */
+  letter-spacing: 0.02em;
+}
+
+.kr {
+  grid-column: 12 / span 3;
+  grid-row: 1 / span 2;
+}
+
+.en {
+  color: #9fa0a2;
+
+  font-size: clamp(26px, calc(17px + 1.180556vw), 34px);
+  grid-column: 12 / -1;
+  grid-row: 3 / span 2;
+}
+
+.seoulsize {
+  grid-column: 12 / span 2;
+  grid-row: 5 / span 2;
+  justify-self: start;
+  align-self: end;
+  width: 100%;
+  height: auto;
+  max-width: 162px;
+  object-fit: contain;
+}
+
+.wrap2 {
+  grid-column: 9 / span 4;
+  grid-row: span 13 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrap2 .text {
+  font-family: "Helvetica Neue";
+  font-size: clamp(32px, calc(20px + 1.666667vw), 44px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 93%; /* 40.92px */
+}
+
+.wrap2 .text.first {
+  max-width: 249px;
+}
+
+.wrap2 .text.second {
+  max-width: 232px;
+}
+
+.wrap3 {
+  grid-column: 13 / span 3;
+  grid-row: 10 / span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrap3 .text {
+  font-family: "Yoon Gothic 700", sans-serif;
+  font-size: clamp(25px, calc(16px + 1.180556vw), 33px);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 113%; /* 37.29px */
+}
+.wrap4 {
+  display: contents;
+}
+
+.wrap4-1 {
+  grid-column: -3 / -1;
+  grid-row: -6 / -1;
+  width: 100%;
+  justify-self: end;
+  align-self: stretch;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.wrap4-1 .text {
+  text-align: right;
+  font-family: "Yoon Gothic 700";
+  font-size: clamp(10px, calc(7px + 0.416667vw), 13px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 126%; /* 16.38px */
+}
+
+.wrap4-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.wrap4-2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  align-self: flex-end;
+  object-fit: contain;
+}
+
+.img1 {
+  max-width: 74px;
+  aspect-ratio: 74/39;
+}
+
+.img2 {
+  max-width: 162px;
+  aspect-ratio: 93/22;
+}
+
+.img3 {
+  max-width: 128px;
+  aspect-ratio: 64/19;
+}
+
+.wrap4-1.second,
+.wrap4-1.third {
+  display: none;
+}
+/* Tablet — Figma 768 × 1024 */
+@media (max-width: 900px) {
+  #poster {
+    width: 100%;
+    max-width: 768px;
+    aspect-ratio: 768 / 1024;
+    background: #78232e;
+    overflow: hidden;
+  }
+
+  .grid {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+    grid-template-rows: repeat(21, minmax(0, 1fr));
+    gap: min(1.3021vw, 10px);
+  }
+
+  #artsize {
+    display: block;
+    position: absolute;
+    left: 8.3%;
+    top: 15.5%;
+    width: 83.4%;
+    height: 76%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #logo {
+    position: absolute;
+    left: 1.2%;
+    top: 1%;
+    width: 13%;
+    height: 15%;
+    max-width: none;
+    object-fit: contain;
+    object-position: top left;
+  }
+
+  .date {
+    position: absolute;
+    top: 1.1%;
+    right: 36.5%;
+    width: 34%;
+    font-size: min(4.1vw, 32px);
+    line-height: 0.93;
+    letter-spacing: -0.025em;
+    text-align: right;
+  }
+
+  .wrap1,
+  .wrap4 {
+    display: contents;
+  }
+
+  .place {
+    position: absolute;
+    right: 1.5%;
+    width: 27%;
+    font-size: min(1.5vw, 12px);
+    line-height: 1.15;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .kr {
+    top: 1.4%;
+    right: 10px;
+    width: max-content;
+    white-space: nowrap;
+  }
+  .en {
+    top: 6.2%;
+    color: #9fa0a2;
+    font-size: min(1.45vw, 11px);
+  }
+  .place.en,
+  .wrap4-1.first {
+    display: none;
+  }
+  .seoulsize {
+    position: absolute;
+    top: 11.3%;
+    right: 15%;
+    width: 12%;
+    height: auto;
+    max-width: none;
+  }
+
+  .wrap2 {
+    position: absolute;
+    left: 1.2%;
+    top: 26.5%;
+    width: 13%;
+    height: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  .wrap2 .text {
+    font-size: min(1.8vw, 14px);
+    line-height: 1.05;
+    overflow-wrap: normal;
+  }
+  .wrap2 .text.first,
+  .wrap2 .text.second {
+    max-width: none;
+  }
+
+  .wrap3 {
+    position: absolute;
+    top: 20%;
+    right: 10px;
+    width: 11%;
+    height: 31%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .wrap3 .text {
+    font-size: min(1.8vw, 14px);
+    line-height: 1.1;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+  }
+
+  #title {
+    position: absolute;
+    left: 10%;
+    bottom: 1.8%;
+    width: 73%;
+    height: auto;
+    max-width: none;
+    z-index: 2;
+  }
+
+  .wrap4-1 {
+    position: absolute;
+    right: 1.2%;
+    width: 11%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3px;
+  }
+  .wrap4-1.first {
+    bottom: 16%;
+  }
+  .wrap4-1.second {
+    bottom: 7%;
+    display: flex;
+  }
+  .wrap4-1.third {
+    bottom: 1%;
+    height: 5.5%;
+    display: flex;
+  }
+  .wrap4-1 p,
+  .wrap4-1 .text {
+    font-size: min(0.9vw, 7px);
+    line-height: 1.25;
+    text-align: right;
+  }
+  .wrap4-2 {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 2px;
+  }
+  .wrap4-2 img {
+    width: auto;
+    max-width: 100%;
+    max-height: 32%;
+    height: auto;
+    object-fit: contain;
+  }
+  .wrap4-2.second img,
+  .wrap4-2.third img {
+    max-height: 45%;
+  }
+}
+
+/* Mobile — Figma 375 × 812: 375px에서 최대 크기 */
+@media (max-width: 480px) {
+  #poster {
+    width: 100%;
+    max-width: 375px;
+    aspect-ratio: 375 / 812;
+    background: #78232e;
+    overflow: hidden;
+  }
+
+  .grid {
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(32, minmax(0, 1fr));
+    gap: min(2.6667vw, 10px);
+  }
+
+  #artsize {
+    display: block;
+    position: absolute;
+    left: 8%;
+    top: 29.5%;
+    width: 84%;
+    height: 42%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  #logo {
+    position: absolute;
+    left: 2%;
+    top: 1.5%;
+    width: 22%;
+    height: 14%;
+    max-width: none;
+    object-fit: contain;
+    object-position: top left;
+  }
+
+  .date {
+    position: absolute;
+    top: 1.5%;
+    right: 2%;
+    width: 45%;
+    font-size: min(5.6vw, 21px);
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .wrap1,
+  .wrap4 {
+    display: contents;
+  }
+  .place {
+    position: absolute;
+    right: 2%;
+    width: 46%;
+    font-size: min(2.9333vw, 11px);
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-align: right;
+  }
+  .kr {
+    top: 11%;
+    right: 10px;
+    width: max-content;
+    white-space: nowrap;
+  }
+  .en {
+    top: 17%;
+    color: #9fa0a2;
+    font-size: min(2.9333vw, 11px);
+  }
+  .place.en,
+  .wrap4-1.first {
+    display: none;
+  }
+  .seoulsize {
+    display: none;
+  }
+
+  .wrap2 {
+    position: absolute;
+    left: 1.5%;
+    top: 33%;
+    width: 25%;
+    height: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0;
+    z-index: 2;
+  }
+  .wrap2 .text {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: min(3.7333vw, 14px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    overflow-wrap: normal;
+  }
+  .wrap2 .text.first,
+  .wrap2 .text.second {
+    max-width: none;
+  }
+
+  .wrap3 {
+    position: absolute;
+    top: 32%;
+    right: 10px;
+    width: 16%;
+    height: 26%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: min(2.1333vw, 8px);
+    z-index: 2;
+  }
+  .wrap3 .text {
+    font-family: "Yoon Gothic 700", sans-serif;
+    font-size: min(3.7333vw, 14px);
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+  }
+
+  #title {
+    position: absolute;
+    left: 17%;
+    bottom: 14%;
+    width: 67%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
+    z-index: 3;
+  }
+
+  .wrap4-1 {
+    position: absolute;
+    bottom: 2%;
+    width: 29%;
+    height: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: min(1.3333vw, 5px);
+  }
+  .wrap4-1.first {
+    left: 3%;
+    right: auto;
+    bottom: 2%;
+    height: 8%;
+  }
+  .wrap4-1.second {
+    display: flex;
+    left: 35.5%;
+    right: auto;
+    bottom: 2%;
+    height: 8%;
+  }
+  .wrap4-1.third {
+    display: flex;
+    left: 68%;
+    right: auto;
+    bottom: 2%;
+    height: 8%;
+  }
+  .wrap4-1 p,
+  .wrap4-1 .text {
+    font-size: min(1.6vw, 6px);
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .wrap4-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    flex: 1;
+    gap: min(0.8vw, 3px);
+  }
+  .wrap4-2 img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 30%;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
+  }
+  .wrap4-2.second img,
+  .wrap4-2.third img {
+    max-height: 45%;
+  }
+  .img1,
+  .img2,
+  .img3 {
+    max-width: 100%;
+  }
+}
