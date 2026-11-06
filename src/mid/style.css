@@ -1,11 +1,3 @@
-/* Helvetica Neue Bold */
-/* @font-face {
-  font-family: "Helvetica Neue";
-  src: url("./fonts/HelveticaNeue Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-} */
-
 *,
 *::before,
 *::after {
@@ -223,10 +215,6 @@ body {
   aspect-ratio: 64/19;
 }
 
-.wrap4-1.second,
-.wrap4-1.third {
-  display: none;
-}
 /* Tablet — Figma 768 × 1024 */
 @media (max-width: 900px) {
   #poster {
