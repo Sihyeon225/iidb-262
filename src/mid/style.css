@@ -455,7 +455,7 @@ body {
   .date {
     position: absolute;
     top: 1.5%;
-    right: 2%;
+    right: 40%;
     width: 45%;
     font-size: min(5.6vw, 21px);
     line-height: 1.25;
