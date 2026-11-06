@@ -25,7 +25,7 @@ body {
 .grid {
   display: grid;
 
-  width: calc(100% * 1370 / 1440);
+  width: 95.1389%;
   margin-inline: auto;
   padding-block: min(2.638889vw, 38px);
 
@@ -66,7 +66,7 @@ body {
   min-width: 0;
   font-family: "HelveticaNeue", sans-serif;
   text-align: right;
-  font-size: clamp(72px, calc(48px + 3.333333vw), 96px);
+  font-size: 6.6667vw;
   font-style: normal;
   font-weight: 400;
   line-height: 91%; /* 87.36px */
@@ -82,7 +82,7 @@ body {
 
 .place {
   font-family: "Noto Sans KR";
-  font-size: clamp(28px, calc(18px + 1.25vw), 36px);
+  font-size: 2.5vw;
   font-style: normal;
   font-weight: 700;
   line-height: 114%; /* 41.04px */
@@ -97,7 +97,7 @@ body {
 .en {
   color: #9fa0a2;
 
-  font-size: clamp(26px, calc(17px + 1.180556vw), 34px);
+  font-size: 2.3611vw;
   grid-column: 12 / -1;
   grid-row: 3 / span 2;
 }
@@ -123,7 +123,7 @@ body {
 
 .wrap2 .text {
   font-family: "Helvetica Neue";
-  font-size: clamp(32px, calc(20px + 1.666667vw), 44px);
+  font-size: 3.0556vw;
   font-style: normal;
   font-weight: 500;
   line-height: 93%; /* 40.92px */
@@ -147,7 +147,7 @@ body {
 
 .wrap3 .text {
   font-family: "Yoon Gothic 700", sans-serif;
-  font-size: clamp(25px, calc(16px + 1.180556vw), 33px);
+  font-size: 2.2917vw;
   font-style: normal;
   font-weight: 500;
   letter-spacing: -0.03em;
@@ -173,7 +173,7 @@ body {
 .wrap4-1 .text {
   text-align: right;
   font-family: "Yoon Gothic 700";
-  font-size: clamp(10px, calc(7px + 0.416667vw), 13px);
+  font-size: 0.9028vw;
   font-style: normal;
   font-weight: 700;
   line-height: 126%; /* 16.38px */
@@ -211,11 +211,31 @@ body {
   aspect-ratio: 64/19;
 }
 
+@media (min-width: 1440px) {
+  .date {
+    font-size: 96px;
+  }
+  .place {
+    font-size: 36px;
+  }
+  .en {
+    font-size: 34px;
+  }
+  .wrap2 .text {
+    font-size: 44px;
+  }
+  .wrap3 .text {
+    font-size: 33px;
+  }
+  .wrap4-1 .text {
+    font-size: 13px;
+  }
+}
+
 /* Tablet — Figma 768 × 1024 */
 @media (max-width: 900px) {
   #poster {
     width: 100%;
-    max-width: 768px;
     aspect-ratio: 768 / 1024;
     background: #78232e;
     overflow: hidden;
@@ -408,7 +428,6 @@ body {
 @media (max-width: 480px) {
   #poster {
     width: 100%;
-    max-width: 375px;
     aspect-ratio: 375 / 812;
     background: #78232e;
     overflow: hidden;
@@ -495,7 +514,7 @@ body {
   .wrap2 {
     position: absolute;
     left: 1.5%;
-    top: 33%;
+    top: 40%;
     width: 25%;
     height: 24%;
     display: flex;
@@ -541,7 +560,7 @@ body {
 
   #title {
     position: absolute;
-    left: 17%;
+    left: 11%;
     bottom: 14%;
     width: 67%;
     height: auto;
